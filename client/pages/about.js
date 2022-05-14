@@ -20,7 +20,7 @@ export default function About(){
                 About me
             </Typography>
             <Typography variant='body1' align='justify'>
-            My name is Ismael and apart from working as a computer scientist and developer I like to study and develop on blockchain in my free time. I usually create web applications, backends and Smart Contracts using JavaScript, Python and Solidity. Right now I'm in the process of learning more about Substrate, Rust, XCM , EWASM, and Polkadot in general.
+            My name is Ismael and apart from working as a computer scientist and developer I like to study and develop on blockchain in my free time. I usually create web applications, backends and Smart Contracts using JavaScript, Python and Solidity. Right now Im in the process of learning more about Substrate, Rust, XCM , EWASM, and Polkadot in general.
             </Typography>
             
             <Box sx={{display:'flex', flexDirection:'column', gap:1, flexWrap:'wrap'}}>
