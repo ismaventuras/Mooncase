@@ -31,10 +31,10 @@ export default function About(){
                 <MuiLink href='https://moonbeam.foundation/' target="_blank">
                     Moonbeam Foundation
                 </MuiLink>
-                <MuiLink href='/' target="_blank">
-                    Repository
+                <MuiLink href='https://github.com/ismaventuras/Mooncase' target="_blank">
+                    Repository on github
                 </MuiLink>
-                <MuiLink href='/' target="_blank">
+                <MuiLink href='https://moonriver.moonscan.io/address/0x30e7f47755a979221cbadee1844532297f5b928a' target="_blank">
                     Smart Contract on block explorer
                 </MuiLink>
                 <MuiLink href='https://www.covalenthq.com/' target="_blank">
