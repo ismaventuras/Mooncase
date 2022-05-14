@@ -37,4 +37,4 @@ export const popularCollectionsAddresses = [
 
 export const blockExplorerUrl = "https://moonriver.moonscan.io/"
 export const placeHolderUrl = 'https://media3.giphy.com/media/3o7TKO0X6Qqn1fuBUY/giphy.gif'
-export const siteUrl = 'http://localhost:3000/'
+export const siteUrl = 'https://mooncase.vercel.app/'
