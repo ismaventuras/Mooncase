@@ -13,7 +13,6 @@ const TokenIdBox = ({element}) => {
     
     return(
         <Chip label={`#${element.token_id}`} color={'default'} icon={<ZoomOutMapIcon/>}  onClick={onClickView} />
-
     )
 }
 
