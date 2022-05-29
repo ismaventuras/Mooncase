@@ -3,6 +3,8 @@ import { Card, CardHeader,  Divider, Grid, List, ListItem, ListItemText, Paper, 
 import Wait from "./Wait"
 import { Box } from "@mui/system"
 import NameForm from "./NameForm"
+import { useState } from "react"
+import { placeHolderUrl } from "../info"
 
 
 const QueryInfo = ({ contract_address, token_id }) => {
@@ -73,10 +75,20 @@ function NFTData({nftInfo}){
 }
 
 function ImageBox({src}){
+    const [loaded, setLoaded] = useState(false)
+    const [error, setError] = useState(false)
     return(
         <Paper elevation={24} sx={{p:2,display:'flex', justifyContent:'center', alignItems:'center'}}>
             <Box>
-                <Image alt="nft logo" src={src} width={512} height={512}/>
+                {loaded ? null : (<Wait message={'fetching image from IPFS...'}/>)}                
+                <Image 
+                    alt="nft logo" 
+                    src={error ? placeHolderUrl : src} 
+                    width={512} height={512} 
+                    onLoad={() => setLoaded(true)} 
+                    placeholder="blur"
+                    blurDataURL={placeHolderUrl}
+                    />
             </Box>
         </Paper>
     )
