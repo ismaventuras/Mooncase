@@ -1,14 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-// added indexed to events
-contract NameSolverV2 {    
+/*
+Repo: https://github.com/ismaventuras/Mooncase
+Concept of a name resolver for ERC721 tokens.
+Users can create a name that is assigned to a contract address and a token id, then it can be retrieved on any frontend to resolve the NFT.
+This contract is a proof of concept for a hackathon and a production version is being coded.
+*/
+contract NameSolver{    
     
-    event NewName (bytes32 indexed name, address indexed creator);
-    event RemoveName (bytes32 indexed name , address indexed creator, address indexed remover);
-
-    address public owner;
-
+    event NewName (bytes32 indexed name, address indexed creator, address indexed contract_address, uint256 token_id);
+        
     mapping(bytes32 => Name) public savedNames; // mapping where the key is the custom name and the value the nft info
 
     // struct to track each name link to each token
@@ -20,9 +22,7 @@ contract NameSolverV2 {
         address creator; // who created it 
     }
 
-    constructor () {
-        owner = msg.sender;
-    }
+    constructor () {}
 
     /// adds a new new to the mapping
     // reverts if name is already saved
@@ -31,17 +31,7 @@ contract NameSolverV2 {
         require(!_isValid, "name already saved");
 
         savedNames[_name] = Name(_contract_address,_token_id,_chain_id,true, msg.sender);
-        emit NewName(_name, msg.sender);
-    }
-
-    // free a name from the mapping
-    function remove(bytes32 _name) public {
-        Name storage found = savedNames[_name];
-        require(found.isValid, "name does not exist");
-        require(msg.sender == owner || msg.sender == found.creator);
-
-        emit RemoveName(_name, found.creator, msg.sender);
-        delete savedNames[_name];
+        emit NewName(_name, msg.sender,_contract_address, _token_id);
     }
 
 

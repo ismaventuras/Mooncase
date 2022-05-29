@@ -34,7 +34,7 @@ export default function About(){
                 <MuiLink href='https://github.com/ismaventuras/Mooncase' target="_blank">
                     Repository on github
                 </MuiLink>
-                <MuiLink href='https://moonriver.moonscan.io/address/0x30e7f47755a979221cbadee1844532297f5b928a' target="_blank">
+                <MuiLink href='https://moonriver.moonscan.io/address/0x8C77DA16e8fAc98bE59e9935C3d50004719692C5' target="_blank">
                     Smart Contract on block explorer
                 </MuiLink>
                 <MuiLink href='https://www.covalenthq.com/' target="_blank">

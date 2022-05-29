@@ -5,7 +5,7 @@ export const provider = new ethers.providers.JsonRpcProvider(moonriverRPC)
 
 export const chain = 1285
 
-export const nameSolverAddress = "0x30E7F47755a979221cbAdee1844532297f5b928A"
+export const nameSolverAddress = "0x8C77DA16e8fAc98bE59e9935C3d50004719692C5"
 
 export const popularCollectionsAddresses = [
     "0xb654611F84A8dc429BA3cb4FDA9Fad236C505a1a", // moonsama
